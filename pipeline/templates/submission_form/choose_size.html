@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static', filename='../static/favicon.ico')}}">
+    <link rel="stylesheet" href="../static/add_product/input_styles.css">
+   <script src="../static/add_product/add_product.js">
+</script>
+</head>
+<body>
+    <h1>ASOS Product Tracker</h1>
+    <div class="container" id="submit">
+        <h2>Please enter the size you would like to track</h2>
+        <form action="/size" method="post">
+            <br></br>
+            <select class="size-selector" id="variantSelector" name="size">
+            <option data-test-id="Select">Please select a size</option>
+            {% for size in sizes %}
+            <option data-test-id="{{ size }}">{{ size }}</option>
+            {% endfor %}
+        </select>
+        <br></br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="buttons-container">
+        <button id="return_to_index_button" onclick='window.location.href = "./logged_in"'>Homepage</button>
+        <button id="unsubscribe" onclick='window.location.href = "./subscriptions"'>View Subscriptions</button>
+        <button id="unsubscribe" onclick='window.location.href = "./logout"'>Logout</button>
+    </div>
+    <br>
+</body>
+</html>

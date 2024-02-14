@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static', filename='../static/favicon.ico')}}">
+    <link rel="stylesheet" href="../static/add_product/input_styles.css">
+   <script src="../static/add_product/add_product.js">
+</script>
+</head>
+<body>
+    <h1>ASOS Product Tracker</h1>
+    <p>Please enter the complete URL of the ASOS product you would like to track.</p>
+    <div class="container" id="submit">
+        <h2>Please enter an ASOS product URL</h2>
+        <form action="/addproducts" method="post">
+
+            <label for="url">ASOS Product URL:</label>
+            <input type="url" id="url" name="url" required>
+            <span id="error-message" style="color: red; display: none;">Please enter a valid ASOS Product URL.</span>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="buttons-container">
+        <button id="return_to_index_button" onclick='window.location.href = "./logged_in"'>Homepage</button>
+        <button id="unsubscribe" onclick='window.location.href = "./subscriptions"'>View Subscriptions</button>
+        <button id="unsubscribe" onclick='window.location.href = "./logout"'>Logout</button>
+    </div>
+    <br>
+</body>
+</html>

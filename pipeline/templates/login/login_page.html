@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static', filename='../static/favicon.ico')}}">
+    <link rel="stylesheet" href="../static/login/login_page.css">
+   <script src="../static/login/login_page.js">
+</script>
+</head>
+<body>
+    <div class="container" id="submit">
+        <h2>Please enter your login details</h2>
+        <form action="/login" method="post">
+
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span id="email-error-message" style="color: red; display: none;">Please enter a valid email.</span>
+
+            <!-- Password Input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <!-- Password Error Message -->
+            {% if error %}
+            <span id="password-error-message" style="color: red;">{{ error }}</span>
+            {% endif %}
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="buttons-container">
+        <button id="return_to_index_button" onclick='window.location.href = "./"'>Homepage</button>
+        <button id="return_to_index_button" onclick='window.location.href = "./create_account"'>Create Account</button>
+    </div>
+    <br>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static', filename='../static/favicon.ico')}}">
+    <link rel="stylesheet" href="../static/subscriptions/not_subscribed_styles.css">
+</head>
+<body>
+    <h1>You are not subscribed to anything.</h1>
+    <p>If you wish to subscribe to a product, please go to Add Product below.</p>
+
+    <div class="buttons-container">
+        <button id="homepage" onclick='window.location.href = "./logged_in"'>Homepage</button>
+        <button id="unsubscribe" onclick='window.location.href = "./logout"'>Logout</button>
+        <button id="add_product_button" onclick='window.location.href = "./addproducts"'>Add Product</button>
+    </div>
+</body>
+</html>

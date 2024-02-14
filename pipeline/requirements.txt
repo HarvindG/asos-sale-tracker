@@ -1,0 +1,11 @@
+pylint
+pytest
+bs4
+python-dotenv
+requests
+psycopg2-binary
+flask
+boto3
+pytest-cov
+flask_session
+selenium

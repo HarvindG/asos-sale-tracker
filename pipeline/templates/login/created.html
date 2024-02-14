@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale Tracker | Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static', filename='../static/favicon.ico')}}">
+    <link rel="stylesheet" href="../static/index.css">
+</head>
+<body>
+
+<main>
+    <div class="brand">
+        <img class="image" src="{{url_for('static', filename='../static/Logo.png')}}">
+    </div>
+    <div class="content">
+        <p>Thank you for creating an account! Please login below.</p>
+        <div class="button-container">
+            <div class="button-row">
+                <button onclick='window.location.href = "./login"'>Login</button>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
