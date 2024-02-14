@@ -93,3 +93,9 @@ Within each folder, there is a README that explains specifically its role. But t
 - `pipeline` - contains the code that extracts information from various websites / APIs and the uploads it to an RDS.
 - `price-alerts-and-updates` - contains code related to sending a user an email depending on when if a price has dropped or if a products availability has changed.
 - `terraform` - contains terraform files that setup most of the cloud infrastructure needed.
+
+  ## Credits
+  - Harvind Grewal
+  - Abbey Wilkinson
+  - Zander Snow
+  - Tayla Dawson
